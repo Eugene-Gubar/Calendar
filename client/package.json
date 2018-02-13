@@ -1,0 +1,47 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "history": "^4.7.2",
+    "moment": "^2.20.1",
+    "node-sass-chokidar": "^0.0.3",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "react-scripts": "1.1.0",
+    "redux": "^3.7.2",
+    "redux-form": "^7.2.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "w3-css": "^4.0.4"
+  },
+  "scripts": {
+    "start-js": "set PORT=3001 && react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build && mv build ../public/ || move build ../public/",
+    "build": "npm-run-all build-css build-js",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
+  },
+  "proxy": "http://localhost:3000",
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.3.11",
+    "@storybook/addon-links": "^3.3.11",
+    "@storybook/addons": "^3.3.11",
+    "@storybook/react": "^3.3.11",
+    "babel-core": "^6.26.0",
+    "logrocket": "^0.6.2",
+    "npm-run-all": "^4.1.2",
+    "react-styleguidist": "^6.2.0"
+  }
+}

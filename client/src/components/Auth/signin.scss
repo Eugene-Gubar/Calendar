@@ -1,0 +1,79 @@
+//colors
+$color_celeste_approx: #ccc;
+$color_apple_approx: #4caf50;
+$white: white;
+$color_red_orange_approx: #f44336;
+$black: rgb(0, 0, 0);
+$black_40: rgba(0, 0, 0, 0.4);
+$color_romance_approx: #fefefe;
+$color_suva_gray_approx: #e0e0e0;
+$red: red;
+
+//fonts
+$font_0: Arial;
+$font_1: Helvetica;
+$font_2: sans-serif;
+
+//input[type=text], input[type=password]
+%extend_1 {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid $color_celeste_approx;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font_0, $font_1, $font_2;
+}
+input[type="text"],
+input[type="email"] {
+  @extend %extend_1;
+}
+input[type="password"] {
+  @extend %extend_1;
+}
+button {
+  background-color: $color_apple_approx;
+  color: $white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: $color_red_orange_approx;
+}
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px;
+  position: relative;
+}
+.container {
+  padding: 16px;
+}
+.block-signin {
+  max-width: 600px;
+  position: inherit;
+}
+
+.login-content {
+  background-color: $color_romance_approx;
+  margin: 5% auto 15% auto;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
